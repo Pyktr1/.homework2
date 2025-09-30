@@ -1,4 +1,7 @@
 import random 
+
+#Читати з верху до низу
+
 #Імпортуємо random
 
 #Створюємо функцію get_numbers_ticket
