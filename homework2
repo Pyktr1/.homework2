@@ -1,8 +1,10 @@
 import random 
+#Імпортуємо random
 
+#Створюємо функцію get_numbers_ticket
 def get_numbers_ticket(min, max, quantity):
 
-    if min < 1 or max > 49 or quantity < 1 or quantity > (max - min + 1):
+    if min < 1 or max > 1000 or quantity < 1 or quantity > (max - min + 1):
         return []
     
     lottery_numbers = random.sample(range(min, max + 1), quantity)
@@ -11,5 +13,17 @@ def get_numbers_ticket(min, max, quantity):
     
     return lottery_numbers
 
+# Якщо мінімум більше 1 чи максимуи менше 100 чи кількість більше 1 чи кількість менше за максимум - мінімум + 1
+
+# використовуєм random.sample для унікальності лотерейних номерів
+
+#lottery_numbers.sort() сортує номера по зростанню, на кшталт 1, 12, 22.
+
+#return lottery_numbers повертаєм значення lottery_numbers
+
+
 lottery_numbers = get_numbers_ticket(1, 49, 6)
 print("Ваші лотерейні числа:", lottery_numbers)
+
+
+#Виводим результат
