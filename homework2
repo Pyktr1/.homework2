@@ -1,0 +1,15 @@
+import random 
+
+def get_numbers_ticket(min, max, quantity):
+
+    if min < 1 or max > 49 or quantity < 1 or quantity > (max - min + 1):
+        return []
+    
+    lottery_numbers = random.sample(range(min, max + 1), quantity)
+    
+    lottery_numbers.sort()
+    
+    return lottery_numbers
+
+lottery_numbers = get_numbers_ticket(1, 49, 6)
+print("Ваші лотерейні числа:", lottery_numbers)
